@@ -1,0 +1,1810 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Publications SYSTEM "http://s3.amazonaws.com/cs5200.practicum2.chayp.xml/pubmed.dtd">
+<Publications>
+  <Article PMID="14894">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0020-5907</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>15</Volume>
+          <Issue>1</Issue>
+          <PubDate>
+            <Year>1977</Year>
+            <Season>Spring</Season>
+          </PubDate>
+        </JournalIssue>
+        <Title>International anesthesiology clinics</Title>
+        <ISOAbbreviation>Int Anesthesiol Clin</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Pathophysiology of gastric aspiration.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Morgan</LastName>
+          <ForeName>J G</ForeName>
+          <Initials>JG</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="96">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0301-4622</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>3</Volume>
+          <Issue>4</Issue>
+          <PubDate>
+            <Year>1975</Year>
+            <Month>Oct</Month>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biophysical chemistry</Title>
+        <ISOAbbreviation>Biophys Chem</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Polymer concentration dependence of the helix to random coil transition of a charged polypeptide in aqueous salt solution.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Nitta</LastName>
+          <ForeName>K</ForeName>
+          <Initials>K</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Yoneyama</LastName>
+          <ForeName>M</ForeName>
+          <Initials>M</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+    <Article PMID="17090">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0304-3959</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>2</Volume>
+          <Issue>3</Issue>
+          <PubDate>
+            <Year>1976</Year>
+            <Month>Sep</Month>
+          </PubDate>
+        </JournalIssue>
+        <Title>Pain</Title>
+        <ISOAbbreviation>Pain</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>A comprehensive treatment approach to chronic low back pain.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Cairns</LastName>
+          <ForeName>Douglas</ForeName>
+          <Initials>D</Initials>
+          <AffiliationInfo>
+            <Affiliation>Spine Center, Rancho Los Amigos Hospital, 7601 East Imperial Highway, Downey, Calif. 90242 U.S.A.</Affiliation>
+          </AffiliationInfo>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Thomas</LastName>
+          <ForeName>Lynn</ForeName>
+          <Initials>L</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Mooney</LastName>
+          <ForeName>Vert</ForeName>
+          <Initials>V</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Pace</LastName>
+          <ForeName>Blair J</ForeName>
+          <Initials>BJ</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+    <Article PMID="13696">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Electronic">1539-3704</ISSN>
+        <JournalIssue CitedMedium="Internet">
+          <Volume>86</Volume>
+          <Issue>2</Issue>
+          <PubDate>
+            <Year>1977</Year>
+            <Month>Feb</Month>
+          </PubDate>
+        </JournalIssue>
+        <Title>Annals of internal medicine</Title>
+        <ISOAbbreviation>Ann Intern Med</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Bone marrow transplantation with intensive combination chemotherapy/radiation therapy (SCARI) in acute leukemia.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <CollectiveName>The UCLA Bone Marrow Transplantation Group</CollectiveName>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="93">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-3029</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>20</Volume>
+          <Issue>4</Issue>
+          <PubDate>
+            <MedlineDate>1975 Jul-Aug</MedlineDate>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biofizika</Title>
+        <ISOAbbreviation>Biofizika</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>[Structure formation in interphase adsorption layers of lysozyme at liquid boundaries].</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Alekseeva</LastName>
+          <ForeName>I G</ForeName>
+          <Initials>IG</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Lapina</LastName>
+          <ForeName>G P</ForeName>
+          <Initials>GP</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Tulovskaia</LastName>
+          <ForeName>Z D</ForeName>
+          <Initials>ZD</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Izmaĭlova</LastName>
+          <ForeName>V N</ForeName>
+          <Initials>VN</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="1">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-2944</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>13</Volume>
+          <Issue>2</Issue>
+          <PubDate>
+            <Year>1975</Year>
+            <Month>Jun</Month>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biochemical medicine</Title>
+        <ISOAbbreviation>Biochem Med</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Formate assay in body fluids: application in methanol poisoning.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Makar</LastName>
+          <ForeName>A B</ForeName>
+          <Initials>AB</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>McMartin</LastName>
+          <ForeName>K E</ForeName>
+          <Initials>KE</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Palese</LastName>
+          <ForeName>M</ForeName>
+          <Initials>M</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Tephly</LastName>
+          <ForeName>T R</ForeName>
+          <Initials>TR</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="2">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Electronic">1090-2104</ISSN>
+        <JournalIssue CitedMedium="Internet">
+          <Volume>66</Volume>
+          <Issue>4</Issue>
+          <PubDate>
+            <Year>1975</Year>
+            <Month>Oct</Month>
+            <Day>27</Day>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biochemical and biophysical research communications</Title>
+        <ISOAbbreviation>Biochem Biophys Res Commun</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Delineation of the intimate details of the backbone conformation of pyridine nucleotide coenzymes in aqueous solution.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Bose</LastName>
+          <ForeName>K S</ForeName>
+          <Initials>KS</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Sarma</LastName>
+          <ForeName>R H</ForeName>
+          <Initials>RH</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28122">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-2944</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>19</Volume>
+          <Issue>3</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Jun</Month>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biochemical medicine</Title>
+        <ISOAbbreviation>Biochem Med</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Gamma-glutamyl transferase of rat and human intestine: greater enhancement of activity by dipeptides than by amino acids or longer peptides.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Smith</LastName>
+          <ForeName>R L</ForeName>
+          <Initials>RL</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Heizer</LastName>
+          <ForeName>W D</ForeName>
+          <Initials>WD</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28123">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-291X</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>65</Volume>
+          <Issue>4</Issue>
+          <PubDate>
+            <Year>1975</Year>
+            <Month>Aug</Month>
+            <Day>18</Day>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biochemical and biophysical research communications</Title>
+        <ISOAbbreviation>Biochem Biophys Res Commun</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Relationship between sporulation and mutations impairing glutamine synthetase in Bacillus megaterium.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Reysset</LastName>
+          <ForeName>G</ForeName>
+          <Initials>G</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Aubert</LastName>
+          <ForeName>J P</ForeName>
+          <Initials>JP</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28124">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-291X</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>65</Volume>
+          <Issue>4</Issue>
+          <PubDate>
+            <Year>1975</Year>
+            <Month>Aug</Month>
+            <Day>18</Day>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biochemical and biophysical research communications</Title>
+        <ISOAbbreviation>Biochem Biophys Res Commun</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Multiple environments of tryptophan in glucagon.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Conti</LastName>
+          <ForeName>C</ForeName>
+          <Initials>C</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Forster</LastName>
+          <ForeName>L S</ForeName>
+          <Initials>LS</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28125">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-291X</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>65</Volume>
+          <Issue>4</Issue>
+          <PubDate>
+            <Year>1975</Year>
+            <Month>Aug</Month>
+            <Day>18</Day>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biochemical and biophysical research communications</Title>
+        <ISOAbbreviation>Biochem Biophys Res Commun</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Non-linear relationship between oxygen saturation and proton release, and equivalence of the Bohr and Haldane coefficients in human hemoglobin.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Tyuma</LastName>
+          <ForeName>I</ForeName>
+          <Initials>I</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Ueda</LastName>
+          <ForeName>Y</ForeName>
+          <Initials>Y</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28126">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-291X</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>65</Volume>
+          <Issue>4</Issue>
+          <PubDate>
+            <Year>1975</Year>
+            <Month>Aug</Month>
+            <Day>18</Day>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biochemical and biophysical research communications</Title>
+        <ISOAbbreviation>Biochem Biophys Res Commun</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Enzyme replacement in a bacterium: phenotypic correction by the experimental introduction of the wild type enzyme into a live enzyme defective mutant pneumococcus.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Tomasz</LastName>
+          <ForeName>A</ForeName>
+          <Initials>A</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Waks</LastName>
+          <ForeName>S</ForeName>
+          <Initials>S</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28127">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0004-7112</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>16</Volume>
+          <Issue>1</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Mar</Month>
+          </PubDate>
+        </JournalIssue>
+        <Title>Atomic energy review</Title>
+        <ISOAbbreviation>At Energy Rev</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>National and international standardization of radiation dosimetry. Report on the International Symposium held in Atlanta from 5 to 9 December 1977.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Eisenlohr</LastName>
+          <ForeName>H</ForeName>
+          <Initials>H</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28130">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-6648</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>116</Volume>
+          <Issue>11</Issue>
+          <PubDate>
+            <Year>1977</Year>
+            <Month>Nov</Month>
+          </PubDate>
+        </JournalIssue>
+        <Title>Bollettino chimico farmaceutico</Title>
+        <ISOAbbreviation>Boll Chim Farm</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>[Specific and aspecific activity of an antihistaminic of the H1 type: HC 20-511 or ketothiphen (benzo-cyclohepta-thiophenone derivative)].</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Lampa</LastName>
+          <ForeName>E</ForeName>
+          <Initials>E</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Apolito</LastName>
+          <ForeName>A</ForeName>
+          <Initials>A</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Russo</LastName>
+          <ForeName>G</ForeName>
+          <Initials>G</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Pedone</LastName>
+          <ForeName>P</ForeName>
+          <Initials>P</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Alise</LastName>
+          <ForeName>G</ForeName>
+          <Initials>G</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28128">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0312-5963</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>3</Volume>
+          <Issue>4</Issue>
+          <PubDate>
+            <MedlineDate>1978 Jul-Aug</MedlineDate>
+          </PubDate>
+        </JournalIssue>
+        <Title>Clinical pharmacokinetics</Title>
+        <ISOAbbreviation>Clin Pharmacokinet</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Pharmacokinetics of sulphamethoxazole in man: effects of urinary pH and urine flow on metabolism and renal excretion of sulphamethoxazole and its metabolite N4-acetylsulphamethoxazole.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Vree</LastName>
+          <ForeName>T B</ForeName>
+          <Initials>TB</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Hekster</LastName>
+          <ForeName>Y A</ForeName>
+          <Initials>YA</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Baars</LastName>
+          <ForeName>A M</ForeName>
+          <Initials>AM</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Damsma</LastName>
+          <ForeName>J E</ForeName>
+          <Initials>JE</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>van der Kleijn</LastName>
+          <ForeName>E</ForeName>
+          <Initials>E</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28131">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0007-0912</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>50</Volume>
+          <Issue>7</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Jul</Month>
+          </PubDate>
+        </JournalIssue>
+        <Title>British journal of anaesthesia</Title>
+        <ISOAbbreviation>Br J Anaesth</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Toxicity of inhalation anaesthetic agents.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Cohen</LastName>
+          <ForeName>E N</ForeName>
+          <Initials>EN</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28129">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0491-0982</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>57</Volume>
+          <Issue>3</Issue>
+          <PubDate>
+            <MedlineDate>1975 May-Jun</MedlineDate>
+          </PubDate>
+        </JournalIssue>
+        <Title>Stomatologiia. Stomatology</Title>
+        <ISOAbbreviation>Stomatologiia (Sofiia)</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>[Fixed splint for non-parallel teeth].</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Pekhlivanov</LastName>
+          <ForeName>Z</ForeName>
+          <Initials>Z</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28132">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0007-0912</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>50</Volume>
+          <Issue>7</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Jul</Month>
+          </PubDate>
+        </JournalIssue>
+        <Title>British journal of anaesthesia</Title>
+        <ISOAbbreviation>Br J Anaesth</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Serum concentrations of lorazepam.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Diamond</LastName>
+          <ForeName>M J</ForeName>
+          <Initials>MJ</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28133">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0007-0912</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>50</Volume>
+          <Issue>8</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Aug</Month>
+          </PubDate>
+        </JournalIssue>
+        <Title>British journal of anaesthesia</Title>
+        <ISOAbbreviation>Br J Anaesth</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Pharmacokinetics of fazadinium in man.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Duvaldestin</LastName>
+          <ForeName>P</ForeName>
+          <Initials>P</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Henzel</LastName>
+          <ForeName>D</ForeName>
+          <Initials>D</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Demetriou</LastName>
+          <ForeName>M</ForeName>
+          <Initials>M</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Desmonts</LastName>
+          <ForeName>J M</ForeName>
+          <Initials>JM</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28134">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0007-0912</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>50</Volume>
+          <Issue>8</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Aug</Month>
+          </PubDate>
+        </JournalIssue>
+        <Title>British journal of anaesthesia</Title>
+        <ISOAbbreviation>Br J Anaesth</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>The use of chlorazepate for premedication on the night before surgery.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Cohen</LastName>
+          <ForeName>A R</ForeName>
+          <Initials>AR</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Levin</LastName>
+          <ForeName>A</ForeName>
+          <Initials>A</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Houlton</LastName>
+          <ForeName>P J</ForeName>
+          <Initials>PJ</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Wolhuter</LastName>
+          <ForeName>A</ForeName>
+          <Initials>A</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28135">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0306-5251</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>6</Volume>
+          <Issue>2</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Aug</Month>
+          </PubDate>
+        </JournalIssue>
+        <Title>British journal of clinical pharmacology</Title>
+        <ISOAbbreviation>Br J Clin Pharmacol</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Comparative peripheral and coronary haemodynamic effects of rimiterol and isoprenaline.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Stephens</LastName>
+          <ForeName>J D</ForeName>
+          <Initials>JD</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Hayward</LastName>
+          <ForeName>R P</ForeName>
+          <Initials>RP</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Ead</LastName>
+          <ForeName>H</ForeName>
+          <Initials>H</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Adams</LastName>
+          <ForeName>L</ForeName>
+          <Initials>L</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Spurrell</LastName>
+          <ForeName>R A</ForeName>
+          <Initials>RA</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28136">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0306-5251</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>6</Volume>
+          <Issue>2</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Aug</Month>
+          </PubDate>
+        </JournalIssue>
+        <Title>British journal of clinical pharmacology</Title>
+        <ISOAbbreviation>Br J Clin Pharmacol</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Beta-adrenoceptor antagonists and respiratory function.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Perks</LastName>
+          <ForeName>W H</ForeName>
+          <Initials>WH</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Chatterjee</LastName>
+          <ForeName>S S</ForeName>
+          <Initials>SS</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Croxson</LastName>
+          <ForeName>R S</ForeName>
+          <Initials>RS</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Cruickshank</LastName>
+          <ForeName>J M</ForeName>
+          <Initials>JM</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28137">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0306-5251</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>6</Volume>
+          <Issue>2</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Aug</Month>
+          </PubDate>
+        </JournalIssue>
+        <Title>British journal of clinical pharmacology</Title>
+        <ISOAbbreviation>Br J Clin Pharmacol</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Beta-adrenoceptor antagonists and respiratory function.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Kumana</LastName>
+          <ForeName>C R</ForeName>
+          <Initials>CR</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28138">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0306-5251</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>6</Volume>
+          <Issue>2</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Aug</Month>
+          </PubDate>
+        </JournalIssue>
+        <Title>British journal of clinical pharmacology</Title>
+        <ISOAbbreviation>Br J Clin Pharmacol</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Beta-adrenoceptor antagonists and respiratory function.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Oh</LastName>
+          <ForeName>V M</ForeName>
+          <Initials>VM</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Kaye</LastName>
+          <ForeName>C M</ForeName>
+          <Initials>CM</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Warrington</LastName>
+          <ForeName>S J</ForeName>
+          <Initials>SJ</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Taylor</LastName>
+          <ForeName>E A</ForeName>
+          <Initials>EA</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Wadsworth</LastName>
+          <ForeName>J</ForeName>
+          <Initials>J</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28139">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0306-5251</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>6</Volume>
+          <Issue>2</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Aug</Month>
+          </PubDate>
+        </JournalIssue>
+        <Title>British journal of clinical pharmacology</Title>
+        <ISOAbbreviation>Br J Clin Pharmacol</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Beta-adrenoceptor antagonists and respiratory function.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>McDevitt</LastName>
+          <ForeName>D G</ForeName>
+          <Initials>DG</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28140">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0007-1021</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>59</Volume>
+          <Issue>3</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Jun</Month>
+          </PubDate>
+        </JournalIssue>
+        <Title>British journal of experimental pathology</Title>
+        <ISOAbbreviation>Br J Exp Pathol</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Bile enzyme activities in patients with T-tube drainage following cholecystectomy.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Baker</LastName>
+          <ForeName>P R</ForeName>
+          <Initials>PR</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Cuschieri</LastName>
+          <ForeName>A</ForeName>
+          <Initials>A</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28141">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-2960</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>17</Volume>
+          <Issue>12</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Jun</Month>
+            <Day>13</Day>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biochemistry</Title>
+        <ISOAbbreviation>Biochemistry</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>13C and 1H nuclear magnetic resonance studies of bradykinin and selected peptide fragments.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>London</LastName>
+          <ForeName>R E</ForeName>
+          <Initials>RE</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Stewart</LastName>
+          <ForeName>J M</ForeName>
+          <Initials>JM</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Cann</LastName>
+          <ForeName>J R</ForeName>
+          <Initials>JR</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Matwiyoff</LastName>
+          <ForeName>N A</ForeName>
+          <Initials>NA</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28142">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-2960</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>17</Volume>
+          <Issue>12</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Jun</Month>
+            <Day>13</Day>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biochemistry</Title>
+        <ISOAbbreviation>Biochemistry</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>13C nuclear magnetic resonance study of the cis-trans isomerism in X-Pro-Pro tripeptides.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>London</LastName>
+          <ForeName>R E</ForeName>
+          <Initials>RE</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Matwiyoff</LastName>
+          <ForeName>N A</ForeName>
+          <Initials>NA</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Stewart</LastName>
+          <ForeName>J M</ForeName>
+          <Initials>JM</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Cann</LastName>
+          <ForeName>J R</ForeName>
+          <Initials>JR</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28143">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-2960</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>17</Volume>
+          <Issue>12</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Jun</Month>
+            <Day>13</Day>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biochemistry</Title>
+        <ISOAbbreviation>Biochemistry</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Nuclear magnetic resonance studies on bacterial dihydrofolate reductase containing [methyl-13C]methionine.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Blakley</LastName>
+          <ForeName>R L</ForeName>
+          <Initials>RL</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Cocco</LastName>
+          <ForeName>L</ForeName>
+          <Initials>L</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>London</LastName>
+          <ForeName>R E</ForeName>
+          <Initials>RE</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Walker</LastName>
+          <ForeName>T E</ForeName>
+          <Initials>TE</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Matwiyoff</LastName>
+          <ForeName>N A</ForeName>
+          <Initials>NA</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28144">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-2960</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>17</Volume>
+          <Issue>12</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Jun</Month>
+            <Day>13</Day>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biochemistry</Title>
+        <ISOAbbreviation>Biochemistry</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Kinetics of ligand binding to dihydrofolate reductase: binary complex formation with NADPH and coenzyme analogues.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Dunn</LastName>
+          <ForeName>S M</ForeName>
+          <Initials>SM</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Batchelor</LastName>
+          <ForeName>J G</ForeName>
+          <Initials>JG</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>King</LastName>
+          <ForeName>R W</ForeName>
+          <Initials>RW</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28145">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-2960</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>17</Volume>
+          <Issue>13</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Jun</Month>
+            <Day>27</Day>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biochemistry</Title>
+        <ISOAbbreviation>Biochemistry</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Role of Mg2+-ATPase and a pH gradient in the storage of catecholamines in synaptic vesicles.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Toll</LastName>
+          <ForeName>L</ForeName>
+          <Initials>L</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Howard</LastName>
+          <ForeName>B D</ForeName>
+          <Initials>BD</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28146">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-2960</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>17</Volume>
+          <Issue>13</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Jun</Month>
+            <Day>27</Day>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biochemistry</Title>
+        <ISOAbbreviation>Biochemistry</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Enzymatic basis for the Ca2+-induced cross-linking of membrane proteins in intact human erythrocytes.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Siefring</LastName>
+          <ForeName>G E</ForeName>
+          <Initials>GE</Initials>
+          <Suffix>Jr</Suffix>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Apostol</LastName>
+          <ForeName>A B</ForeName>
+          <Initials>AB</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Velasco</LastName>
+          <ForeName>P T</ForeName>
+          <Initials>PT</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Lorand</LastName>
+          <ForeName>L</ForeName>
+          <Initials>L</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28147">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-2960</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>17</Volume>
+          <Issue>13</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Jun</Month>
+            <Day>27</Day>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biochemistry</Title>
+        <ISOAbbreviation>Biochemistry</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Stereospecificity of the intramolecular association of reduced pyridine coenzymes.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Oppenheimer</LastName>
+          <ForeName>N J</ForeName>
+          <Initials>NJ</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Arnold</LastName>
+          <ForeName>L J</ForeName>
+          <Initials>LJ</Initials>
+          <Suffix>Jr</Suffix>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Kaplan</LastName>
+          <ForeName>N O</ForeName>
+          <Initials>NO</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28148">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-2960</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>17</Volume>
+          <Issue>13</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Jun</Month>
+            <Day>27</Day>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biochemistry</Title>
+        <ISOAbbreviation>Biochemistry</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Effects of substituents on the rates of deacylation of substituted benzoyl papains. Role of a carboxylate residue in the catalytic mechanism.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Zannis</LastName>
+          <ForeName>V I</ForeName>
+          <Initials>VI</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Kirsch</LastName>
+          <ForeName>J F</ForeName>
+          <Initials>JF</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28149">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-3002</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>535</Volume>
+          <Issue>2</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Aug</Month>
+            <Day>21</Day>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biochimica et biophysica acta</Title>
+        <ISOAbbreviation>Biochim Biophys Acta</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>The status of tyrosyl residues in a Formosan cobra cardiotoxin.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Hung</LastName>
+          <ForeName>M C</ForeName>
+          <Initials>MC</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Pan</LastName>
+          <ForeName>Y H</ForeName>
+          <Initials>YH</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Cheng</LastName>
+          <ForeName>K L</ForeName>
+          <Initials>KL</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Chen</LastName>
+          <ForeName>Y H</ForeName>
+          <Initials>YH</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28150">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-3002</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>535</Volume>
+          <Issue>2</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Aug</Month>
+            <Day>21</Day>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biochimica et biophysica acta</Title>
+        <ISOAbbreviation>Biochim Biophys Acta</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Spectroscopic studies on the tyrosine residues of canavalin.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Margalit</LastName>
+          <ForeName>R</ForeName>
+          <Initials>R</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Shaklai</LastName>
+          <ForeName>N</ForeName>
+          <Initials>N</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28151">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-3002</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>535</Volume>
+          <Issue>2</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Aug</Month>
+            <Day>21</Day>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biochimica et biophysica acta</Title>
+        <ISOAbbreviation>Biochim Biophys Acta</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Cooperative binding of folate to a protein isolated from cow's whey.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Hansen</LastName>
+          <ForeName>S I</ForeName>
+          <Initials>SI</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Holm</LastName>
+          <ForeName>J</ForeName>
+          <Initials>J</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Lyngbye</LastName>
+          <ForeName>J</ForeName>
+          <Initials>J</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28152">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-3002</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>535</Volume>
+          <Issue>2</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Aug</Month>
+            <Day>21</Day>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biochimica et biophysica acta</Title>
+        <ISOAbbreviation>Biochim Biophys Acta</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Proton NMR studies on soya bean lipoxygenase-1.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Egmond</LastName>
+          <ForeName>M R</ForeName>
+          <Initials>MR</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Williams</LastName>
+          <ForeName>R J</ForeName>
+          <Initials>RJ</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28153">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-3029</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>23</Volume>
+          <Issue>4</Issue>
+          <PubDate>
+            <MedlineDate>1978 Jul-Aug</MedlineDate>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biofizika</Title>
+        <ISOAbbreviation>Biofizika</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>[Role of the electron acceptor properties of lysozyme and its substrate inhibitors in photosensitized electron transport in their complexes by the EPR method].</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Kuropteva</LastName>
+          <ForeName>Z V</ForeName>
+          <Initials>ZV</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Avdeeva</LastName>
+          <ForeName>O S</ForeName>
+          <Initials>OS</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Pulatova</LastName>
+          <ForeName>M K</ForeName>
+          <Initials>MK</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Kravchenko</LastName>
+          <ForeName>N A</ForeName>
+          <Initials>NA</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28154">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-3029</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>23</Volume>
+          <Issue>4</Issue>
+          <PubDate>
+            <MedlineDate>1978 Jul-Aug</MedlineDate>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biofizika</Title>
+        <ISOAbbreviation>Biofizika</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>[Structural changes in cell nuclei in the physiologic pH range].</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Konev</LastName>
+          <ForeName>S V</ForeName>
+          <Initials>SV</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Khrapovitskiĭ</LastName>
+          <ForeName>V P</ForeName>
+          <Initials>VP</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Cherenkevich</LastName>
+          <ForeName>S N</ForeName>
+          <Initials>SN</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28157">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0470-4606</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Issue>6</Issue>
+          <PubDate>
+            <Year>1978</Year>
+          </PubDate>
+        </JournalIssue>
+        <Title>Nauchnye doklady vysshei shkoly. Biologicheskie nauki</Title>
+        <ISOAbbreviation>Nauchnye Doki Vyss Shkoly Biol Nauki</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>[Activation of a tissue-specific mitochondrial oxidative phosphorylation uncoupler from rat liver].</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Elbakidze</LastName>
+          <ForeName>G M</ForeName>
+          <Initials>GM</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Livanova</LastName>
+          <ForeName>L M</ForeName>
+          <Initials>LM</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28155">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-3029</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>23</Volume>
+          <Issue>4</Issue>
+          <PubDate>
+            <MedlineDate>1978 Jul-Aug</MedlineDate>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biofizika</Title>
+        <ISOAbbreviation>Biofizika</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>[Phosphorescence of reduced nicotinamide coenzymes].</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Nikandrov</LastName>
+          <ForeName>V V</ForeName>
+          <Initials>VV</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Krasnovskiĭ</LastName>
+          <ForeName>A A</ForeName>
+          <Initials>AA</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28158">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-3126</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>33</Volume>
+          <Issue>3-4</Issue>
+          <PubDate>
+            <Year>1978</Year>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biology of the neonate</Title>
+        <ISOAbbreviation>Biol Neonate</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Sympathetic and parasympathetic control of heart rate in unanaesthetized fetal and newborn lambs.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Walker</LastName>
+          <ForeName>A M</ForeName>
+          <Initials>AM</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Cannata</LastName>
+          <ForeName>J</ForeName>
+          <Initials>J</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Dowling</LastName>
+          <ForeName>M H</ForeName>
+          <Initials>MH</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Ritchie</LastName>
+          <ForeName>B</ForeName>
+          <Initials>B</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Maloney</LastName>
+          <ForeName>J E</ForeName>
+          <Initials>JE</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28156">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-3029</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>23</Volume>
+          <Issue>4</Issue>
+          <PubDate>
+            <MedlineDate>1978 Jul-Aug</MedlineDate>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biofizika</Title>
+        <ISOAbbreviation>Biofizika</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>[Contraction--relaxation of glycerinated muscle fibers induced by a pH change in the presence of parvalbumins].</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Burkhanov</LastName>
+          <ForeName>S A</ForeName>
+          <Initials>SA</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Chapliĭ</LastName>
+          <ForeName>M F</ForeName>
+          <Initials>MF</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Permiakov</LastName>
+          <ForeName>E A</ForeName>
+          <Initials>EA</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Burshteĭn</LastName>
+          <ForeName>E A</ForeName>
+          <Initials>EA</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28159">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0301-5912</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>4</Volume>
+          <Issue>3</Issue>
+          <PubDate>
+            <Year>1977</Year>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biotelemetry</Title>
+        <ISOAbbreviation>Biotelemetry</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Fundamental aspects of antimony thin film electrodes for pH measurement.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Shigemitsu</LastName>
+          <ForeName>T</ForeName>
+          <Initials>T</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Matsumoto</LastName>
+          <ForeName>G</ForeName>
+          <Initials>G</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28160">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-355X</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>15</Volume>
+          <Issue>1</Issue>
+          <PubDate>
+            <Year>1978</Year>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biorheology</Title>
+        <ISOAbbreviation>Biorheology</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>British Microcirculation Society. Provincial scientific meeting, 29-30 September 1977. Abstracts.</ArticleTitle>
+    </PubDetails>
+  </Article>
+  <Article PMID="28161">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-355X</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>15</Volume>
+          <Issue>1</Issue>
+          <PubDate>
+            <Year>1978</Year>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biorheology</Title>
+        <ISOAbbreviation>Biorheology</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Tissue pH measurement [proceedings].</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Harrison</LastName>
+          <ForeName>D K</ForeName>
+          <Initials>DK</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Walker</LastName>
+          <ForeName>W F</ForeName>
+          <Initials>WF</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28162">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0365-9615</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>86</Volume>
+          <Issue>7</Issue>
+          <PubDate>
+            <Year>1978</Year>
+          </PubDate>
+        </JournalIssue>
+        <Title>Biulleten' eksperimental'noi biologii i meditsiny</Title>
+        <ISOAbbreviation>Biull Eksp Biol Med</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>[Use of acetylcholinesterase reactivators and central cholinolytics in the treatment of experimental tetanus poisoning].</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Aleksevich</LastName>
+          <ForeName>Ia I</ForeName>
+          <Initials>IaI</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28163">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0007-4861</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>19</Volume>
+          <Issue>6</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Jun</Month>
+          </PubDate>
+        </JournalIssue>
+        <Title>Bulletin of environmental contamination and toxicology</Title>
+        <ISOAbbreviation>Bull Environ Contam Toxicol</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>An ecological survey of the effect of sulfur dioxide emitted from an acid work factory.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Wong</LastName>
+          <ForeName>M H</ForeName>
+          <Initials>MH</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28164">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0081-0746</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>178</Volume>
+          <PubDate>
+            <Year>1977</Year>
+            <Month>Sep</Month>
+            <Day>17</Day>
+          </PubDate>
+        </JournalIssue>
+        <Title>Bulletin de la Societe belge d'ophtalmologie</Title>
+        <ISOAbbreviation>Bull Soc Belge Ophtalmol</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Experience of beta-blockade in the medical treatment of glaucoma.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Brenkman</LastName>
+          <ForeName>R F</ForeName>
+          <Initials>RF</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28165">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0081-0746</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>179</Volume>
+          <PubDate>
+            <Year>1977</Year>
+            <Month>Nov</Month>
+            <Day>27</Day>
+          </PubDate>
+        </JournalIssue>
+        <Title>Bulletin de la Societe belge d'ophtalmologie</Title>
+        <ISOAbbreviation>Bull Soc Belge Ophtalmol</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>[Studies on the mechanism of action of beta blocking agents on the intraocular pressure].</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Missotten</LastName>
+          <ForeName>L</ForeName>
+          <Initials>L</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Goethals</LastName>
+          <ForeName>M</ForeName>
+          <Initials>M</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28166">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0007-1323</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>65</Volume>
+          <Issue>8</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Aug</Month>
+          </PubDate>
+        </JournalIssue>
+        <Title>The British journal of surgery</Title>
+        <ISOAbbreviation>Br J Surg</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Prediction of wound sepsis following gastric operations.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Gatehouse</LastName>
+          <ForeName>D</ForeName>
+          <Initials>D</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Dimock</LastName>
+          <ForeName>F</ForeName>
+          <Initials>F</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Burdon</LastName>
+          <ForeName>D W</ForeName>
+          <Initials>DW</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Alexander-Williams</LastName>
+          <ForeName>J</ForeName>
+          <Initials>J</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Keighley</LastName>
+          <ForeName>M R</ForeName>
+          <Initials>MR</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28167">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0007-1447</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>2</Volume>
+          <Issue>6132</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Jul</Month>
+            <Day>22</Day>
+          </PubDate>
+        </JournalIssue>
+        <Title>British medical journal</Title>
+        <ISOAbbreviation>Br Med J</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Urinary incontinence during treatment with depot phenothiazines.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Dainow</LastName>
+          <ForeName>I I</ForeName>
+          <Initials>II</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="28168">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0006-8993</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>150</Volume>
+          <Issue>3</Issue>
+          <PubDate>
+            <Year>1978</Year>
+            <Month>Jul</Month>
+            <Day>21</Day>
+          </PubDate>
+        </JournalIssue>
+        <Title>Brain research</Title>
+        <ISOAbbreviation>Brain Res</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Glial fibrillary acidic protein in reaggregating and monolayer cultures of fetal mouse cerebral hemispheres.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Kozak</LastName>
+          <ForeName>L P</ForeName>
+          <Initials>LP</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Dahl</LastName>
+          <ForeName>D</ForeName>
+          <Initials>D</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Bignami</LastName>
+          <ForeName>A</ForeName>
+          <Initials>A</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+</Publications>
