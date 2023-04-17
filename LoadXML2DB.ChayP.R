@@ -95,6 +95,11 @@ df.journal <- data.frame ( journal_id = integer(0),
                            iso_abbreviation = character(),
                            stringsAsFactors = F)
 
+df.article <- data.frame ( pmid = integer(0),
+                           article_title = character(),
+                           journal_id = integer(),
+                           stringsAsFactors = F)
+
 df.author <- data.frame(author_id = integer(0),
                         valid_yn = character(0),
                         last_name = character(0),
@@ -151,28 +156,6 @@ get_issn_id <- function(issn_id, issn_type) {
     return(issn)
   }
   
-}
-
-extract_journal_data <- function() {
-  journals <- xpathSApply(xmlDoc, journal_path)
-  journal_id <- 1
-  
-  for(journal in journals) {
-    issn_id <- xpathSApply(journal, ".//ISSN", xmlValue)
-    if(length(issn_id) == 0 || is.na(issn_id)) {
-      issn_id = "Unknown"
-    }
-    journal_title = xpathSApply(journal, ".//Title", xmlValue)
-    iso_abbreviation = xpathSApply(journal, ".//ISOAbbreviation", xmlValue)
-    
-    df.journal[nrow(df.journal) + 1, ] <- list(journal_id, journal_title, 
-                                               issn_id, iso_abbreviation)
-    journal_id <- journal_id + 1
-  }
-  
-  df.journal <- distinct(df.journal, title, issn_id, iso_abbreviation, .keep_all = TRUE)
-  
-  return(df.journal)
 }
 
 extract_author_data <- function() {
@@ -393,6 +376,55 @@ extract_journal_issue_data <- function() {
   return(df.journal_issue)
 }
 
+extract_journal_data <- function() {
+  journals <- xpathSApply(xmlDoc, journal_path)
+  journal_id <- 1
+  
+  for(journal in journals) {
+    issn_id <- xpathSApply(journal, ".//ISSN", xmlValue)
+    if(length(issn_id) == 0 || is.na(issn_id)) {
+      issn_id = "Unknown"
+    }
+    journal_title = xpathSApply(journal, ".//Title", xmlValue)
+    iso_abbreviation = xpathSApply(journal, ".//ISOAbbreviation", xmlValue)
+    
+    df.journal[nrow(df.journal) + 1, ] <- list(journal_id, journal_title, 
+                                               issn_id, iso_abbreviation)
+    journal_id <- journal_id + 1
+  }
+  
+  df.journal <- distinct(df.journal, title, issn_id, iso_abbreviation, .keep_all = TRUE)
+  
+  return(df.journal)
+}
+
+extract_article_data <- function() {
+  articles <- xpathApply(xmlDoc, article_path)
+  for(article in articles) {
+    pmid <- xmlGetAttr(article, "PMID")
+    article_title <- xpathSApply(article, ".//ArticleTitle", xmlValue)
+    journal <- xpathSApply(article, "./PubDetails/Journal")[[1]]
+    
+    ## Get journal_id for article
+    issn_id <- xpathSApply(journal, ".//ISSN", xmlValue)
+    if(length(issn_id) == 0 || is.na(issn_id)) {
+      issn_id = "Unknown"
+    }
+    journal_title = xpathSApply(journal, ".//Title", xmlValue)
+    iso_abbreviation = xpathSApply(journal, ".//ISOAbbreviation", xmlValue)
+    
+    journal_id <- df.journal$journal_id[which(df.journal$title == journal_title &
+                                                df.journal$iso_abbreviation == iso_abbreviation &
+                                                df.journal$issn_id == issn_id)]
+    
+    df.article <- rbind(df.article, data.frame(pmid = pmid, 
+                                               article_title = article_title,
+                                               journal_id = journal_id,
+                                               stringsAsFactors = F))
+  }
+  return(df.article)
+}
+
 # Extract the article nodes
 articles <- getNodeSet(xmlDoc, "//Article")
 
@@ -408,9 +440,8 @@ df.issn <- extract_issn_data()
 df.journal <- extract_journal_data()
 df.journal_issue <- extract_journal_issue_data()
 df.author <- extract_author_data()
-
-print(df.author)
-
+df.article <- extract_article_data()
+print(df.article)
 ## Write df to tables
 #dbWriteTable(dbcon, "issns", df.issn, overwrite = T)
 #dbWriteTable(dbcon, "journals", df.journal, overwrite = T)
