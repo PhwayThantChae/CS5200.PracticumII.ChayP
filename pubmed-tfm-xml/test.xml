@@ -1,6 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Publications SYSTEM "http://s3.amazonaws.com/cs5200.practicum2.chayp.xml/pubmed.dtd">
 <Publications>
+  <Article PMID="1296">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0303-7207</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>4</Volume>
+          <Issue>1</Issue>
+          <PubDate>
+            <MedlineDate>1975 Dec-1976 Jan</MedlineDate>
+          </PubDate>
+        </JournalIssue>
+        <Title>Molecular and cellular endocrinology</Title>
+        <ISOAbbreviation>Mol Cell Endocrinol</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Impaired Sertoli cell function in experimental cryptorchidism in the rat.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Hagenas</LastName>
+          <ForeName>L</ForeName>
+          <Initials>L</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Ritzen</LastName>
+          <ForeName>E M</ForeName>
+          <Initials>EM</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+  <Article PMID="3650">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0022-2631</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>25</Volume>
+          <Issue>3-4</Issue>
+          <PubDate>
+            <MedlineDate>1975-1976</MedlineDate>
+          </PubDate>
+        </JournalIssue>
+        <Title>The Journal of membrane biology</Title>
+        <ISOAbbreviation>J Membr Biol</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>ATP synthesis driven by a protonmotive force in Streptococcus lactis.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Maloney</LastName>
+          <ForeName>P C</ForeName>
+          <Initials>PC</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Wilson</LastName>
+          <ForeName>T H</ForeName>
+          <Initials>TH</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
   <Article PMID="14894">
     <PubDetails>
       <Journal>

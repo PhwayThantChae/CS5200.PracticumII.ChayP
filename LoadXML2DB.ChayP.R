@@ -4,8 +4,8 @@ library(dplyr)
 library(stringr)
 
 ## 1. Load XML file
- #xmlFile <- "pubmed-tfm-xml/pubmed22n0001-tf.xml"
- #xmlFile <- "http://s3.amazonaws.com/cs5200.practicum2.chayp.xml/pubmed22n0001-tf.xml"
+#xmlFile <- "pubmed-tfm-xml/pubmed22n0001-tf.xml"
+#xmlFile <- "http://s3.amazonaws.com/cs5200.practicum2.chayp.xml/pubmed22n0001-tf.xml"
 xmlFile <- "pubmed-tfm-xml/test.xml"
 xmlDoc <- xmlParse(xmlFile, validate = TRUE)
 
@@ -22,11 +22,12 @@ dbExecute(dbcon, "DROP TABLE IF EXISTS article_authors")
 
 dbExecute(dbcon, "CREATE TABLE issns (
                     issn_id TEXT,
-                    issn_type TEXT
+                    issn_type TEXT,
+                    PRIMARY KEY (issn_id)
                   )")
 
 dbExecute(dbcon, "CREATE TABLE journals (
-                    journal_id INTEGER PRIMARY KEY NOT NULL,
+                    journal_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
                     title TEXT,
                     issn_id INTEGER,
                     iso_abbreviation TEXT,
@@ -34,17 +35,18 @@ dbExecute(dbcon, "CREATE TABLE journals (
                   )")
 
 dbExecute(dbcon, "CREATE TABLE articles (
-                    pmid TEXT PRIMARY KEY NOT NULL,
+                    pmid TEXT NOT NULL,
                     title TEXT,
                     journal_id INTEGER NOT NULL,
+                    PRIMARY KEY (pmid),
                     FOREIGN KEY (journal_id) REFERENCES journals(journal_id)
                   )")
 
 dbExecute(dbcon, "CREATE TABLE journal_issues (
-                    journal_issue_id INTEGER PRIMARY KEY NOT NULL,
+                    journal_issue_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
                     cited_medium TEXT,
                     volume INTEGER,
-                    issue INTEGER,
+                    issue TEXT,
                     published_year INTEGER,
                     published_month INTEGER,
                     published_day INTEGER,
@@ -58,7 +60,7 @@ dbExecute(dbcon, "CREATE TABLE journal_issues (
                   )")
 
 dbExecute(dbcon, "CREATE TABLE authors (
-                    author_id INTEGER PRIMARY KEY NOT NULL,
+                    author_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
                     last_name TEXT,
                     fore_name TEXT,
                     initials TEXT,
@@ -71,6 +73,7 @@ dbExecute(dbcon, "CREATE TABLE authors (
 dbExecute(dbcon, "CREATE TABLE article_authors (
                     author_id INTEGER,
                     pmid TEXT,
+                    complete_yn TEXT,
                     PRIMARY KEY (pmid, author_id),
                     FOREIGN KEY (pmid) REFERENCES articles(pmid),
                     FOREIGN KEY (author_id) REFERENCES authors(author_id)
@@ -78,7 +81,6 @@ dbExecute(dbcon, "CREATE TABLE article_authors (
 
 
 ## 3. Extract and transform the data from the XML file
-## Extract the Article nodes
 article_path <- "//Article"
 issn_path <- "//Article/PubDetails/Journal/ISSN"
 journal_path <- "//Article/PubDetails/Journal"
@@ -95,9 +97,9 @@ df.journal <- data.frame ( journal_id = integer(0),
                            iso_abbreviation = character(),
                            stringsAsFactors = F)
 
-df.article <- data.frame ( pmid = integer(0),
+df.article <- data.frame ( pmid = character(0),
                            article_title = character(),
-                           journal_id = integer(),
+                           journal_id = integer(0),
                            stringsAsFactors = F)
 
 df.author <- data.frame(author_id = integer(0),
@@ -121,8 +123,12 @@ df.journal_issue <- data.frame( journal_issue_id = integer(0),
                                 medline_start_date = character(),
                                 medline_end_date = character(),
                                 season = character(),
-                                journal_id = integer(),
+                                journal_id = integer(0),
                                 stringsAsFactors = F)
+
+df.article_author <- data.frame(author_id = integer(0),
+                                pmid = character(),
+                                complete_yn = character())
 
 extract_issn_data <- function() {
 
@@ -142,20 +148,6 @@ extract_issn_data <- function() {
   
   df.issn <- distinct(df.issn, issn_id, issn_type, .keep_all = TRUE)
   return(df.issn)
-}
-
-get_issn_id <- function(issn_id, issn_type) {
-  issn <- df.issn$issn_id[which(df.issn$issn_id == issn_id &
-                              df.issn$issn_type == issn_type)]
-  
-  if (length(issn) <= 0) {
-    return(issn)
-  } else {
-    issn <- df.issn$issn_id[which(df.issn$issn_id == "Unknown" &
-                                    df.issn$issn_type == "Unknown")]
-    return(issn)
-  }
-  
 }
 
 extract_author_data <- function() {
@@ -200,7 +192,7 @@ extract_author_data <- function() {
     }
       
     
-    df.author <- rbind(df.author, data.frame(author_id = author_id, 
+    df.author <- rbind(df.author, data.frame(author_id = as.integer(author_id), 
                                              valid_yn = valid_yn,
                                              last_name = last_name,
                                              fore_name = fore_name,
@@ -216,13 +208,6 @@ extract_author_data <- function() {
   
   return(df.author)
 }
-
-#complete_yn <- xmlGetAttr(author, "CompleteYN")
-#author_list <- xpathSApply(author, ".//Author")
-#for(a in author_list) {
-  
-#}
-#print("*************************8")
 
 convert_medline_daterange <- function(medline_date) {
   
@@ -241,16 +226,37 @@ convert_medline_daterange <- function(medline_date) {
     start_date <- as.Date(paste(year, start_month_num, "01", sep = "-"))
     
     # Create an end date for the range
-    end_date <- as.Date(paste(year, end_month_num, "28", sep = "-"))
+    end_date <- as.Date(paste(year, end_month_num, "01", sep = "-"))
     
     # Generate a sequence of dates that span the range
     date_range <- seq(start_date, end_date, by = "day")
     
-    # Print the date range
-    return(list(start_date = start_date, end_date = end_date))
-  } else {
-    return(list(start_date = "", end_date = ""))
+  } else if (grepl("\\d{4} [[:alpha:]]{3}-\\d{4} (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)", medline_date)) {
+    print(medline_date)
+    matches <- regmatches(medline_date, regexpr("\\d{4} [A-Za-z]{3}-\\d{4} [A-Za-z]{3}", medline_date))
+    if (length(matches) > 0) {
+      date_parts <- strsplit(matches, "-| ")
+      print(date_parts)
+      start_month <- convert_month(date_parts[[1]][2])
+      end_month <- convert_month(date_parts[[1]][4])
+      
+      start_date <- as.Date(paste(date_parts[[1]][1], start_month, "01", sep = "-"), "%Y-%m-%d")
+      end_date <- as.Date(paste(date_parts[[1]][3], end_month + 1, "01", sep = "-"), "%Y-%m-%d") - 1
+    }
+  } else if(grepl("\\d{4}-\\d{4}", medline_date)) {
+    print(medline_date)
+    matches <- regmatches(medline_date, regexpr("\\d{4}-\\d{4}", medline_date))
+    if (length(matches) > 0) {
+      date_parts <- strsplit(matches, "-| ")
+      start_year <- date_parts[[1]][1]
+      end_year <- date_parts[[1]][2]
+      
+      start_date <- as.Date(paste(start_year, "12", "01", sep = "-"), "%Y-%m-%d")
+      end_date <- as.Date(paste(end_year, "12", "01", sep = "-"), "%Y-%m-%d")
+    }
   }
+  
+  return(list(start_date = start_date, end_date = end_date))
 }
 
 convert_month <- function(month) {
@@ -294,7 +300,7 @@ extract_journal_issue_data <- function() {
     issue <- xpathSApply(journal_issue, "./Issue", xmlValue)
     year <- xpathSApply(journal_issue, "./PubDate/Year", xmlValue)
     month <- xpathSApply(journal_issue, "./PubDate/Month", xmlValue)
-    day <- as.numeric(xpathSApply(journal_issue, "./PubDate/Day", xmlValue))
+    day <- as.integer(xpathSApply(journal_issue, "./PubDate/Day", xmlValue))
     medline_date <- xpathSApply(journal_issue, "./PubDate/MedlineDate", xmlValue)
     season <- xpathSApply(journal_issue, "./PubDate/Season", xmlValue)
     
@@ -332,6 +338,8 @@ extract_journal_issue_data <- function() {
     medline_end_date = ""
     
     if(!is.null(medline_date) && !is.na(medline_date) && (length(medline_date) != 0)) {
+      print("hiii")
+      print(medline_date)
       medline_date_range = convert_medline_daterange(medline_date)
       medline_start_date = format(medline_date_range$start_date, "%Y-%m-%d")
       medline_end_date = format(medline_date_range$end_date, "%Y-%m-%d")
@@ -349,22 +357,22 @@ extract_journal_issue_data <- function() {
     }
     
     if(is.null(issue) || is.na(issue) || (length(issue) == 0)) {
-      issue = 0
+      issue = ""
     }
     
-    df.journal_issue <- rbind(df.journal_issue, data.frame(journal_issue_id = journal_issue_id, 
+    df.journal_issue <- rbind(df.journal_issue, data.frame(journal_issue_id = as.integer(journal_issue_id), 
                                                            cited_medium = cited_medium, 
                                                            volume = volume,
                                                            issue = issue,
-                                                           published_year = as.numeric(year),
-                                                           published_month = as.numeric(month),
-                                                           published_day = as.numeric(day),
+                                                           published_year = as.integer(year),
+                                                           published_month = as.integer(month),
+                                                           published_day = as.integer(day),
                                                            published_date = published_date_str,
                                                            medline_date = medline_date,
                                                            medline_start_date = medline_start_date,
                                                            medline_end_date = medline_end_date,
                                                            season = season,
-                                                           journal_id = journal_id,
+                                                           journal_id = as.integer(journal_id),
                                                            stringsAsFactors = F))
   
     journal_issue_id <- journal_issue_id + 1
@@ -388,7 +396,7 @@ extract_journal_data <- function() {
     journal_title = xpathSApply(journal, ".//Title", xmlValue)
     iso_abbreviation = xpathSApply(journal, ".//ISOAbbreviation", xmlValue)
     
-    df.journal[nrow(df.journal) + 1, ] <- list(journal_id, journal_title, 
+    df.journal[nrow(df.journal) + 1, ] <- list(as.integer(journal_id), journal_title, 
                                                issn_id, iso_abbreviation)
     journal_id <- journal_id + 1
   }
@@ -419,21 +427,80 @@ extract_article_data <- function() {
     
     df.article <- rbind(df.article, data.frame(pmid = pmid, 
                                                article_title = article_title,
-                                               journal_id = journal_id,
+                                               journal_id = as.integer(journal_id),
                                                stringsAsFactors = F))
   }
+  
+  df.article <- distinct(df.article, article_title, journal_id, .keep_all = TRUE)
+  
   return(df.article)
 }
 
-# Extract the article nodes
-articles <- getNodeSet(xmlDoc, "//Article")
-
-# Extract the PMID and Article Title for each article
-article_list <- lapply(articles, function(article) {
-  pmid <- xmlGetAttr(article, "PMID")
-  article_title <- xpathSApply(article, ".//ArticleTitle", xmlValue)
-  #journal_id <- get_journal_id(article)
-})
+extract_article_author_data <- function() {
+  articles <- xpathApply(xmlDoc, article_path)
+  for(article in articles) {
+    pmid <- xmlGetAttr(article, "PMID")
+    authorLists <- xpathSApply(article, ".//AuthorList")
+    for (authorList in authorLists) {
+      complete_yn <- xmlGetAttr(authorList, "CompleteYN")
+      authors <- xpathSApply(article, ".//Author")
+      for (author in authors) {
+        valid_yn <- xmlGetAttr(author, "ValidYN")
+        last_name <- xpathSApply(author, "./LastName", xmlValue)
+        fore_name <- xpathSApply(author, "./ForeName", xmlValue)
+        initials <- xpathSApply(author, "./Initials", xmlValue)
+        suffix <- xpathSApply(author, "./Suffix", xmlValue)
+        affiliation_info <- xpathSApply(author, "./AffiliationInfo/Affiliation", xmlValue)
+        collective_name <- xpathSApply(author, "./CollectiveName", xmlValue)
+        
+        if(length(valid_yn) == 0) {
+          valid_yn <- ""
+        }
+        
+        if(length(last_name) == 0) {
+          last_name <- ""
+        }
+        
+        if(length(fore_name) == 0) {
+          fore_name <- ""
+        }
+        
+        if(length(initials) == 0) {
+          initials <- ""
+        }
+        
+        if(length(suffix) == 0) {
+          suffix <- ""
+        }
+        
+        if(length(affiliation_info) == 0) {
+          affiliation_info <- ""
+        }
+        
+        if(length(collective_name) == 0) {
+          collective_name <- ""
+        }
+        
+        author_id <- df.author$author_id[which(df.author$last_name == last_name &
+                                               df.author$fore_name == fore_name &
+                                               df.author$initials == initials &
+                                               df.author$suffix == suffix &
+                                               df.author$affiliation_info == affiliation_info &
+                                               df.author$collective_name == collective_name) ]
+        
+        df.article_author <- rbind(df.article_author, data.frame(pmid = pmid, 
+                                                                 author_id = as.integer(author_id),
+                                                                 complete_yn = complete_yn,
+                                                                 stringsAsFactors = F))
+        
+      }
+    }
+  }
+  
+  df.article_author <- distinct(df.article_author, pmid, author_id, complete_yn, .keep_all = TRUE)
+  
+  return(df.article_author)
+}
 
 
 df.issn <- extract_issn_data()
@@ -441,8 +508,13 @@ df.journal <- extract_journal_data()
 df.journal_issue <- extract_journal_issue_data()
 df.author <- extract_author_data()
 df.article <- extract_article_data()
-print(df.article)
-## Write df to tables
-#dbWriteTable(dbcon, "issns", df.issn, overwrite = T)
-#dbWriteTable(dbcon, "journals", df.journal, overwrite = T)
-#dbWriteTable(dbcon, "journal_issues", df.journal_issue, overwrite = T)
+df.article_author <- extract_article_author_data()
+
+
+## Write dataframes to tables
+dbWriteTable(dbcon, "issns", df.issn, overwrite = T)
+dbWriteTable(dbcon, "journals", df.journal, overwrite = T)
+dbWriteTable(dbcon, "journal_issues", df.journal_issue, overwrite = T)
+dbWriteTable(dbcon, "authors", df.author, overwrite = T)
+dbWriteTable(dbcon, "articles", df.article, overwrite = T)
+dbWriteTable(dbcon, "article_authors", df.article_author, overwrite = T)
