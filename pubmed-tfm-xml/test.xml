@@ -30,6 +30,36 @@
       </AuthorList>
     </PubDetails>
   </Article>
+    <Article PMID="4216">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0008-4166</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>22</Volume>
+          <Issue>4</Issue>
+          <PubDate>
+            <Year>1976</Year>
+            <Month>04</Month>
+          </PubDate>
+        </JournalIssue>
+        <Title>Canadian journal of microbiology</Title>
+        <ISOAbbreviation>Can J Microbiol</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>Superficial cell-wall layers on Spirillum "Ordal" and their in vitro reassembly.</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Beveridge</LastName>
+          <ForeName>T J</ForeName>
+          <Initials>TJ</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Murray</LastName>
+          <ForeName>R G E</ForeName>
+          <Initials>RGE</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
   <Article PMID="3650">
     <PubDetails>
       <Journal>

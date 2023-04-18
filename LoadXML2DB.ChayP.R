@@ -5,8 +5,8 @@ library(stringr)
 
 ## 1. Load XML file
 #xmlFile <- "pubmed-tfm-xml/pubmed22n0001-tf.xml"
-#xmlFile <- "http://s3.amazonaws.com/cs5200.practicum2.chayp.xml/pubmed22n0001-tf.xml"
-xmlFile <- "pubmed-tfm-xml/test.xml"
+xmlFile <- "http://s3.amazonaws.com/cs5200.practicum2.chayp.xml/pubmed22n0001-tf.xml"
+#xmlFile <- "pubmed-tfm-xml/test.xml"
 xmlDoc <- xmlParse(xmlFile, validate = TRUE)
 
 ## 2. Create table schema
@@ -236,7 +236,6 @@ convert_medline_daterange <- function(medline_date) {
     matches <- regmatches(medline_date, regexpr("\\d{4} [A-Za-z]{3}-\\d{4} [A-Za-z]{3}", medline_date))
     if (length(matches) > 0) {
       date_parts <- strsplit(matches, "-| ")
-      print(date_parts)
       start_month <- convert_month(date_parts[[1]][2])
       end_month <- convert_month(date_parts[[1]][4])
       
@@ -308,10 +307,16 @@ extract_journal_issue_data <- function() {
       day <- 1
     }
     
+    print(month)
+    
     if(is.null(month) || is.na(month) || (length(month) == 0)) {
       month <- 1
     } else {
-      month = convert_month(month)
+      if(month %in% month.abb) {
+        month = convert_month(month)
+      } else {
+       month = as.integer(month) 
+      }
     }
     
     if(is.null(year) || is.na(year) || (length(year) == 0)) {
@@ -325,8 +330,9 @@ extract_journal_issue_data <- function() {
     if(year != 0 && !is.null(season) && !is.na(season) && (length(season) != 0)) {
       month = season_to_month(season)
     }
-    
+
     published_date = paste(year, month, day, sep = "-")
+    print(published_date)
     published_date_obj <- as.Date(published_date)
     published_date_str <- format(published_date_obj, "%Y-%m-%d")
     
@@ -338,7 +344,6 @@ extract_journal_issue_data <- function() {
     medline_end_date = ""
     
     if(!is.null(medline_date) && !is.na(medline_date) && (length(medline_date) != 0)) {
-      print("hiii")
       print(medline_date)
       medline_date_range = convert_medline_daterange(medline_date)
       medline_start_date = format(medline_date_range$start_date, "%Y-%m-%d")
@@ -443,6 +448,9 @@ extract_article_author_data <- function() {
     authorLists <- xpathSApply(article, ".//AuthorList")
     for (authorList in authorLists) {
       complete_yn <- xmlGetAttr(authorList, "CompleteYN")
+      if(is.null(complete_yn) || is.na(complete_yn) || (length(complete_yn) == 0)) {
+        complete_yn = ""
+      }
       authors <- xpathSApply(article, ".//Author")
       for (author in authors) {
         valid_yn <- xmlGetAttr(author, "ValidYN")
@@ -502,12 +510,23 @@ extract_article_author_data <- function() {
   return(df.article_author)
 }
 
-
+print("Extracting ISSN Data")
+print("---------------------")
 df.issn <- extract_issn_data()
+print("Extracting Journal Data")
+print("---------------------")
 df.journal <- extract_journal_data()
-df.journal_issue <- extract_journal_issue_data()
+print("Extracting Journal Issue Data")
+print("---------------------")
+#df.journal_issue <- extract_journal_issue_data()
+print("Extracting Author Data")
+print("---------------------")
 df.author <- extract_author_data()
+print("Extracting Article Data")
+print("---------------------")
 df.article <- extract_article_data()
+print("Extracting Article Author Data")
+print("---------------------")
 df.article_author <- extract_article_author_data()
 
 
