@@ -30,6 +30,98 @@
       </AuthorList>
     </PubDetails>
   </Article>
+    <Article PMID="8769">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0301-1518</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>5</Volume>
+          <Issue>28</Issue>
+          <PubDate>
+            <MedlineDate>1976 Aug 28-Sep 4</MedlineDate>
+          </PubDate>
+        </JournalIssue>
+        <Title>La Nouvelle presse medicale</Title>
+        <ISOAbbreviation>Nouv Presse Med</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>[Latent renal tubular acidosis of the cirrhotic patient. Study of urinary excretion of protons and sodium].</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Charmes</LastName>
+          <ForeName>J P</ForeName>
+          <Initials>JP</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Nicot</LastName>
+          <ForeName>G</ForeName>
+          <Initials>G</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Valette</LastName>
+          <ForeName>J P</ForeName>
+          <Initials>JP</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Claude</LastName>
+          <ForeName>R</ForeName>
+          <Initials>R</Initials>
+        </Author>
+        <Author ValidYN="Y">
+          <LastName>Leroux-Robert</LastName>
+          <ForeName>C</ForeName>
+          <Initials>C</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+    <Article PMID="8767">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0301-1518</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>5</Volume>
+          <Issue>27</Issue>
+          <PubDate>
+            <MedlineDate>1976 Jul 3-10</MedlineDate>
+          </PubDate>
+        </JournalIssue>
+        <Title>La Nouvelle presse medicale</Title>
+        <ISOAbbreviation>Nouv Presse Med</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>[Cytological, etiological and prognostic aspects of male infertility. Attempt at classification apropos of 1,303 cases].</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Alexandre</LastName>
+          <ForeName>C</ForeName>
+          <Initials>C</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
+    <Article PMID="4745">
+    <PubDetails>
+      <Journal>
+        <ISSN IssnType="Print">0026-4733</ISSN>
+        <JournalIssue CitedMedium="Print">
+          <Volume>30</Volume>
+          <Issue>15-16</Issue>
+          <PubDate>
+            <MedlineDate>1975 Aug 15-31</MedlineDate>
+          </PubDate>
+        </JournalIssue>
+        <Title>Minerva chirurgica</Title>
+        <ISOAbbreviation>Minerva Chir</ISOAbbreviation>
+      </Journal>
+      <ArticleTitle>[Problems connected with kidney transplantation. Experiences at the Transplantation Center in Milan. Clinical selection of the recipient].</ArticleTitle>
+      <AuthorList CompleteYN="Y">
+        <Author ValidYN="Y">
+          <LastName>Ponticelli</LastName>
+          <ForeName>C</ForeName>
+          <Initials>C</Initials>
+        </Author>
+      </AuthorList>
+    </PubDetails>
+  </Article>
     <Article PMID="4216">
     <PubDetails>
       <Journal>
