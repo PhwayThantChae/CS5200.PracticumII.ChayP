@@ -10,8 +10,8 @@ library(stringr)
 
 ## 1. Load XML file
 #xmlFile <- "pubmed-tfm-xml/pubmed22n0001-tf.xml"
-xmlFile <- "http://s3.amazonaws.com/cs5200.practicum2.chayp.xml/pubmed22n0001-tf.xml"
-#xmlFile <- "pubmed-tfm-xml/test.xml"
+#xmlFile <- "http://s3.amazonaws.com/cs5200.practicum2.chayp.xml/pubmed22n0001-tf.xml"
+xmlFile <- "pubmed-tfm-xml/test.xml"
 xmlDoc <- xmlParse(xmlFile, validate = TRUE)
 
 ## 2. Create table schema
@@ -419,9 +419,9 @@ extract_journal_issue_data <- function() {
     journal_title = xpathSApply(journals[[i]], "./Title", xmlValue)
     iso_abbreviation = xpathSApply(journals[[i]], ".//ISOAbbreviation", xmlValue)
     
-    journal_id <- df.journal$journal_id[which(df.journal$title == journal_title &
-                                              df.journal$iso_abbreviation == iso_abbreviation &
-                                              df.journal$issn_id == issn_id)]
+    journal_id <- df.journal[df.journal$title == journal_title &
+                               df.journal$iso_abbreviation == iso_abbreviation &
+                               df.journal$issn_id == issn_id, ]$journal_id
 
     journal_issue = get_journal_issue_from_journal(journals[[i]])
     
