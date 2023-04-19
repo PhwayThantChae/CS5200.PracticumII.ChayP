@@ -2,6 +2,7 @@
 # Date: 2023-04-19
 # Title: Part 1 - Load XML Data into Database
 
+runtime <- system.time({
 library(XML)
 library(RSQLite)
 library(dplyr)
@@ -9,8 +10,8 @@ library(stringr)
 
 ## 1. Load XML file
 #xmlFile <- "pubmed-tfm-xml/pubmed22n0001-tf.xml"
-#xmlFile <- "http://s3.amazonaws.com/cs5200.practicum2.chayp.xml/pubmed22n0001-tf.xml"
-xmlFile <- "pubmed-tfm-xml/test.xml"
+xmlFile <- "http://s3.amazonaws.com/cs5200.practicum2.chayp.xml/pubmed22n0001-tf.xml"
+#xmlFile <- "pubmed-tfm-xml/test.xml"
 xmlDoc <- xmlParse(xmlFile, validate = TRUE)
 
 ## 2. Create table schema
@@ -486,21 +487,22 @@ extract_article_data <- function() {
     journal_title = xpathSApply(journal, ".//Title", xmlValue)
     iso_abbreviation = xpathSApply(journal, ".//ISOAbbreviation", xmlValue)
     
-    journal_id <- df.journal$journal_id[which(df.journal$title == journal_title &
-                                                df.journal$iso_abbreviation == iso_abbreviation &
-                                                df.journal$issn_id == issn_id)]
+    
+    journal_id <- df.journal[df.journal$title == journal_title &
+                             df.journal$iso_abbreviation == iso_abbreviation &
+                             df.journal$issn_id == issn_id, ]$journal_id
 
     journal_issue = get_journal_issue_from_journal(journal)
     
-    journal_issue_id <- df.journal_issue$journal_issue_id[which(df.journal_issue$cited_medium == journal_issue$cited_medium & 
-                                                                  df.journal_issue$volume == journal_issue$volume &                                  
-                                                                  df.journal_issue$issue == journal_issue$issue &                                  
-                                                                  df.journal_issue$published_date == journal_issue$published_date &
-                                                                  df.journal_issue$medline_date == journal_issue$medline_date &
-                                                                  df.journal_issue$medline_start_date == journal_issue$medline_start_date &
-                                                                  df.journal_issue$medline_end_date == journal_issue$medline_end_date &
-                                                                  df.journal_issue$season == journal_issue$season &
-                                                                  df.journal_issue$journal_id == journal_id)]
+    journal_issue_id <- df.journal_issue[df.journal_issue$cited_medium == journal_issue$cited_medium & 
+                                           df.journal_issue$volume == journal_issue$volume &                                  
+                                           df.journal_issue$issue == journal_issue$issue &                                  
+                                           df.journal_issue$published_date == journal_issue$published_date &
+                                           df.journal_issue$medline_date == journal_issue$medline_date &
+                                           df.journal_issue$medline_start_date == journal_issue$medline_start_date &
+                                           df.journal_issue$medline_end_date == journal_issue$medline_end_date &
+                                           df.journal_issue$season == journal_issue$season &
+                                           df.journal_issue$journal_id == journal_id, ]$journal_issue_id
     
     df.article[nrow(df.article) + 1, ] <- list(pmid, article_title, as.integer(journal_id), as.integer(journal_issue_id))
   }
@@ -620,3 +622,6 @@ dbWriteTable(dbcon, "journal_issues", df.journal_issue, overwrite = T)
 dbWriteTable(dbcon, "authors", df.author, overwrite = T)
 dbWriteTable(dbcon, "articles", df.article, overwrite = T)
 dbWriteTable(dbcon, "article_authors", df.article_author, overwrite = T)
+})
+
+cat(sprintf("Total runtime: %.2f seconds\n", runtime[[3]]))

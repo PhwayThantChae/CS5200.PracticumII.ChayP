@@ -53,6 +53,12 @@ articles_per_journal_per_quarter <- dbGetQuery(sqlitedbcon, "
     journals.journal_id,
     year,
     quarter
+  ORDER BY
+    journals.journal_id,
+    year,
+    quarter,
+    num_articles,
+    num_unique_authors
 ")
 
 articles_per_journal_per_quarter
