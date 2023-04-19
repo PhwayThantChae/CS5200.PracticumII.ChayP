@@ -1,6 +1,7 @@
+# Title: Part 1 - Load XML Data into Database
 # Author: Phwe Thant Chay
 # Date: 2023-04-19
-# Title: Part 1 - Load XML Data into Database
+# Course: CS 5200 DBMS
 
 runtime <- system.time({
 library(XML)
@@ -10,8 +11,8 @@ library(stringr)
 
 ## 1. Load XML file
 #xmlFile <- "pubmed-tfm-xml/pubmed22n0001-tf.xml"
-#xmlFile <- "http://s3.amazonaws.com/cs5200.practicum2.chayp.xml/pubmed22n0001-tf.xml"
-xmlFile <- "pubmed-tfm-xml/test.xml"
+xmlFile <- "http://s3.amazonaws.com/cs5200.practicum2.chayp.xml/pubmed22n0001-tf.xml"
+#xmlFile <- "pubmed-tfm-xml/test.xml"
 xmlDoc <- xmlParse(xmlFile, validate = TRUE)
 
 ## 2. Create table schema
@@ -570,18 +571,6 @@ extract_article_author_data <- function() {
                                    df.author$collective_name == collective_name, ]$author_id
         
         
-        #author_id <- df.author$author_id[which(df.author$last_name == last_name &
-                                               #df.author$fore_name == fore_name &
-                                               #df.author$initials == initials &
-                                               #df.author$suffix == suffix &
-                                               #df.author$affiliation_info == affiliation_info &
-                                               #df.author$collective_name == collective_name) ]
-        
-        #df.article_author <- rbind(df.article_author, data.frame(pmid = pmid, 
-                                                                 #author_id = as.integer(author_id),
-                                                                 #complete_yn = complete_yn,
-                                                                 #stringsAsFactors = F))
-        
         df.article_author[nrow(df.article_author) + 1, ] <- list(author_id, pmid, 
                                                                  complete_yn)
         
@@ -624,4 +613,4 @@ dbWriteTable(dbcon, "articles", df.article, overwrite = T)
 dbWriteTable(dbcon, "article_authors", df.article_author, overwrite = T)
 })
 
-cat(sprintf("Total runtime: %.2f seconds\n", runtime[[3]]))
+cat(sprintf("Total runtime: %.2f minutes\n", runtime[[3]]/60))
