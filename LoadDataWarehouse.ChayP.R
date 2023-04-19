@@ -23,6 +23,8 @@ mydbcon <-  dbConnect(MySQL(), user = db_user, password = db_password,
 sqlitedbcon <- dbConnect(RSQLite::SQLite(), dbname = "pubmed-clean.sqlite")
 
 ## 3. Create Journal fact table in MySQL
+dbExecute(dbcon, "DROP TABLE IF EXISTS journal_facts")
+
 dbExecute(dbcon, "CREATE TABLE journal_facts (
                     journal_id INTEGER NOT NULL,
                     title TEXT,
@@ -30,6 +32,27 @@ dbExecute(dbcon, "CREATE TABLE journal_facts (
                     quarter INTEGER,
                     articles_published INTEGER,
                     unique_authors INTEGER,
-                    PRIMARY KEY (journal_id, year, quarter),
-                    FOREIGN KEY (journal_id) REFERENCES journals(journal_id)
+                    PRIMARY KEY (journal_id, year, quarter)
                   )")
+
+
+# 4. Get the number of articles published per journal per quarter and year
+articles_per_journal_per_quarter <- dbGetQuery(sqlitedbcon, "
+  SELECT 
+    journals.journal_id,
+    strftime('%Y', journal_issues.published_date) AS year,
+    CAST((strftime('%m', journal_issues.published_date) - 1) / 3 + 1 AS INTEGER) AS quarter,
+    COUNT(DISTINCT articles.pmid) AS num_articles,
+    COUNT(DISTINCT article_authors.author_id) AS num_unique_authors
+  FROM 
+    journals 
+    JOIN journal_issues ON journals.journal_id = journal_issues.journal_id
+    JOIN articles ON journals.journal_id = articles.journal_id
+    JOIN article_authors ON articles.pmid = article_authors.pmid
+  GROUP BY 
+    journals.journal_id,
+    year,
+    quarter
+")
+
+articles_per_journal_per_quarter

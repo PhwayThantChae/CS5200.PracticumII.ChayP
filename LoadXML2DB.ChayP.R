@@ -9,8 +9,8 @@ library(stringr)
 
 ## 1. Load XML file
 #xmlFile <- "pubmed-tfm-xml/pubmed22n0001-tf.xml"
-xmlFile <- "http://s3.amazonaws.com/cs5200.practicum2.chayp.xml/pubmed22n0001-tf.xml"
-#xmlFile <- "pubmed-tfm-xml/test.xml"
+#xmlFile <- "http://s3.amazonaws.com/cs5200.practicum2.chayp.xml/pubmed22n0001-tf.xml"
+xmlFile <- "pubmed-tfm-xml/test.xml"
 xmlDoc <- xmlParse(xmlFile, validate = TRUE)
 
 ## 2. Create table schema
@@ -42,8 +42,10 @@ dbExecute(dbcon, "CREATE TABLE articles (
                     pmid TEXT NOT NULL,
                     title TEXT,
                     journal_id INTEGER NOT NULL,
+                    journal_issue_id INTEGER NOT NULL,
                     PRIMARY KEY (pmid),
-                    FOREIGN KEY (journal_id) REFERENCES journals(journal_id)
+                    FOREIGN KEY (journal_id) REFERENCES journals(journal_id),
+                    FOREIGN KEY (journal_issue_id) REFERENCES journal_issues(journal_issue_id)
                   )")
 
 dbExecute(dbcon, "CREATE TABLE journal_issues (
@@ -104,6 +106,7 @@ df.journal <- data.frame ( journal_id = integer(0),
 df.article <- data.frame ( pmid = character(0),
                            article_title = character(),
                            journal_id = integer(0),
+                           journal_issue_id = integer(0),
                            stringsAsFactors = F)
 
 df.author <- data.frame(author_id = integer(0),
@@ -319,6 +322,88 @@ season_to_month <- function(season_name) {
   return(start_month)
 }
 
+## Function to extract journal issue from journal
+get_journal_issue_from_journal <- function(journal) {
+  journal_issue <- xpathSApply(journal, ".//JournalIssue")[[1]]
+  cited_medium <- xmlGetAttr(journal_issue, "CitedMedium")
+  volume <- xpathSApply(journal_issue, "./Volume", xmlValue)
+  issue <- xpathSApply(journal_issue, "./Issue", xmlValue)
+  year <- xpathSApply(journal_issue, "./PubDate/Year", xmlValue)
+  month <- xpathSApply(journal_issue, "./PubDate/Month", xmlValue)
+  day <- as.integer(xpathSApply(journal_issue, "./PubDate/Day", xmlValue))
+  medline_date <- xpathSApply(journal_issue, "./PubDate/MedlineDate", xmlValue)
+  season <- xpathSApply(journal_issue, "./PubDate/Season", xmlValue)
+  
+  if(is.null(day) || is.na(day) || (length(day) == 0)) {
+    day <- 1
+  }
+  
+  if(is.null(month) || is.na(month) || (length(month) == 0)) {
+    month <- 1
+  } else {
+    if(month %in% month.abb) {
+      month = convert_month(month)
+    } else {
+      month = as.integer(month) 
+    }
+  }
+  
+  if(is.null(year) || is.na(year) || (length(year) == 0)) {
+    year <- 0
+  }
+  
+  if(year == 0) {
+    year = 1700
+  }
+  
+  if(year != 0 && !is.null(season) && !is.na(season) && (length(season) != 0)) {
+    month = season_to_month(season)
+  }
+  
+  published_date = paste(year, month, day, sep = "-")
+  published_date_obj <- as.Date(published_date)
+  published_date_str <- format(published_date_obj, "%Y-%m-%d")
+  
+  medline_start_date = ""
+  medline_end_date = ""
+  
+  if(!is.null(medline_date) && !is.na(medline_date) && (length(medline_date) != 0)) {
+    medline_date_range = convert_medline_daterange(medline_date)
+    medline_start_date = format(medline_date_range$start_date, "%Y-%m-%d")
+    medline_end_date = format(medline_date_range$end_date, "%Y-%m-%d")
+    
+  } else {
+    medline_date = ""
+  }
+  
+  if(is.null(season) || is.na(season) || (length(season) == 0)) {
+    season = ""
+  }
+  
+  if(is.null(volume) || is.na(volume) || (length(volume) == 0)) {
+    volume = 0
+  }
+  
+  if(is.null(issue) || is.na(issue) || (length(issue) == 0)) {
+    issue = ""
+  }
+  
+  journal_issue_data <- list()
+  journal_issue_data$cited_medium <- cited_medium
+  journal_issue_data$volume <- volume
+  journal_issue_data$issue <- issue
+  journal_issue_data$year <- as.integer(year)
+  journal_issue_data$month <- as.integer(month)
+  journal_issue_data$day <- as.integer(day)
+  journal_issue_data$published_date <- published_date_str
+  journal_issue_data$medline_date <- medline_date
+  journal_issue_data$medline_start_date <- medline_start_date
+  journal_issue_data$medline_end_date <- medline_end_date
+  journal_issue_data$season <- season
+  
+  return(journal_issue_data)
+}
+
 ## Function to extract journal issue data from XML
 extract_journal_issue_data <- function() {
   journals <- xpathApply(xmlDoc, journal_path)
@@ -336,98 +421,21 @@ extract_journal_issue_data <- function() {
     journal_id <- df.journal$journal_id[which(df.journal$title == journal_title &
                                               df.journal$iso_abbreviation == iso_abbreviation &
                                               df.journal$issn_id == issn_id)]
-    
-    journal_issue <- xpathSApply(journals[[i]], ".//JournalIssue")[[1]]
-    cited_medium <- xmlGetAttr(journal_issue, "CitedMedium")
-    volume <- xpathSApply(journal_issue, "./Volume", xmlValue)
-    issue <- xpathSApply(journal_issue, "./Issue", xmlValue)
-    year <- xpathSApply(journal_issue, "./PubDate/Year", xmlValue)
-    month <- xpathSApply(journal_issue, "./PubDate/Month", xmlValue)
-    day <- as.integer(xpathSApply(journal_issue, "./PubDate/Day", xmlValue))
-    medline_date <- xpathSApply(journal_issue, "./PubDate/MedlineDate", xmlValue)
-    season <- xpathSApply(journal_issue, "./PubDate/Season", xmlValue)
-    
-    if(is.null(day) || is.na(day) || (length(day) == 0)) {
-      day <- 1
-    }
-    
-    if(is.null(month) || is.na(month) || (length(month) == 0)) {
-      month <- 1
-    } else {
-      if(month %in% month.abb) {
-        month = convert_month(month)
-      } else {
-       month = as.integer(month) 
-      }
-    }
-    
-    if(is.null(year) || is.na(year) || (length(year) == 0)) {
-      year <- 0
-    }
-    
-    if(year == 0) {
-      year = 1700
-    }
-    
-    if(year != 0 && !is.null(season) && !is.na(season) && (length(season) != 0)) {
-      month = season_to_month(season)
-    }
 
-    published_date = paste(year, month, day, sep = "-")
-    published_date_obj <- as.Date(published_date)
-    published_date_str <- format(published_date_obj, "%Y-%m-%d")
-    
-    medline_start_date = ""
-    medline_end_date = ""
-    
-    if(!is.null(medline_date) && !is.na(medline_date) && (length(medline_date) != 0)) {
-      medline_date_range = convert_medline_daterange(medline_date)
-      medline_start_date = format(medline_date_range$start_date, "%Y-%m-%d")
-      medline_end_date = format(medline_date_range$end_date, "%Y-%m-%d")
-      
-    } else {
-      medline_date = ""
-    }
-    
-    if(is.null(season) || is.na(season) || (length(season) == 0)) {
-      season = ""
-    }
-    
-    if(is.null(volume) || is.na(volume) || (length(volume) == 0)) {
-      volume = 0
-    }
-    
-    if(is.null(issue) || is.na(issue) || (length(issue) == 0)) {
-      issue = ""
-    }
-    
-    #df.journal_issue <- rbind(df.journal_issue, data.frame(journal_issue_id = as.integer(journal_issue_id), 
-                                                           #cited_medium = cited_medium, 
-                                                           #volume = volume,
-                                                           #issue = issue,
-                                                           #published_year = as.integer(year),
-                                                           #published_month = as.integer(month),
-                                                           #published_day = as.integer(day),
-                                                           #published_date = published_date_str,
-                                                           #medline_date = medline_date,
-                                                           #medline_start_date = medline_start_date,
-                                                           #medline_end_date = medline_end_date,
-                                                           #season = season,
-                                                           #journal_id = as.integer(journal_id),
-                                                           #stringsAsFactors = F))
+    journal_issue = get_journal_issue_from_journal(journals[[i]])
     
     df.journal_issue[nrow(df.journal_issue) + 1, ] <- list(as.integer(journal_issue_id), 
-                                                           cited_medium,
-                                                           volume,
-                                                           issue,
-                                                           as.integer(year),
-                                                           as.integer(month),
-                                                           as.integer(day),
-                                                           published_date_str,
-                                                           medline_date,
-                                                           medline_start_date,
-                                                           medline_end_date,
-                                                           season,
+                                                           journal_issue$cited_medium,
+                                                           journal_issue$volume,
+                                                           journal_issue$issue,
+                                                           journal_issue$year,
+                                                           journal_issue$month,
+                                                           journal_issue$day,
+                                                           journal_issue$published_date,
+                                                           journal_issue$medline_date,
+                                                           journal_issue$medline_start_date,
+                                                           journal_issue$medline_end_date,
+                                                           journal_issue$season,
                                                            as.integer(journal_id))
   
     journal_issue_id <- journal_issue_id + 1
@@ -481,13 +489,20 @@ extract_article_data <- function() {
     journal_id <- df.journal$journal_id[which(df.journal$title == journal_title &
                                                 df.journal$iso_abbreviation == iso_abbreviation &
                                                 df.journal$issn_id == issn_id)]
+
+    journal_issue = get_journal_issue_from_journal(journal)
     
-    #df.article <- rbind(df.article, data.frame(pmid = pmid, 
-                                               #article_title = article_title,
-                                               #journal_id = as.integer(journal_id),
-                                               #stringsAsFactors = F))
+    journal_issue_id <- df.journal_issue$journal_issue_id[which(df.journal_issue$cited_medium == journal_issue$cited_medium & 
+                                                                  df.journal_issue$volume == journal_issue$volume &                                  
+                                                                  df.journal_issue$issue == journal_issue$issue &                                  
+                                                                  df.journal_issue$published_date == journal_issue$published_date &
+                                                                  df.journal_issue$medline_date == journal_issue$medline_date &
+                                                                  df.journal_issue$medline_start_date == journal_issue$medline_start_date &
+                                                                  df.journal_issue$medline_end_date == journal_issue$medline_end_date &
+                                                                  df.journal_issue$season == journal_issue$season &
+                                                                  df.journal_issue$journal_id == journal_id)]
     
-    df.article[nrow(df.article) + 1, ] <- list(pmid, article_title, as.integer(journal_id))
+    df.article[nrow(df.article) + 1, ] <- list(pmid, article_title, as.integer(journal_id), as.integer(journal_issue_id))
   }
   
   df.article <- distinct(df.article, article_title, journal_id, .keep_all = TRUE)
