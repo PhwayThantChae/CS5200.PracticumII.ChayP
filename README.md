@@ -17,7 +17,7 @@
 ### Part 2: Create Star/Snowflake Schema
 
 <ol>
-    <li>Create a new R Script called **LoadDataWarehouse.LastNameF.R** for Part 2.</li>
+    <li>Create a new R Script called <b>LoadDataWarehouse.LastNameF.R</b> for Part 2.</li>
     <li>Create a MySQL database and establish a connection.</li>
     <li>Design and populate a star schema for journal facts. The fact table should include the journal PK, title, number of articles published per quarter and per year, and number of unique authors published per quarter and per month. Use the data from the SQLite database created in Part 1 and populate the fact table via R. Ensure scalability and consider performance for large-scale databases. </li>
     <li>Support analytical queries such as the number of articles published in journals in specific years and quarters, articles published per quarter across all years, and number of unique authors publishing articles per year. </li>
